@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>soshalomontana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+        <span class="material-icons">menu</span>
+      </button>
+      <h1 class="navbar-title">TAONGA ALFRED PHIRI</h1>
+      <nav class="navbar-menu">
+        <button type="button" onclick="smoothScrollToSection('about')">About</button>
+        <button type="button" onclick="smoothScrollToSection('skills')">Skills</button>
+        <button type="button" onclick="smoothScrollToSection('projects')">Projects</button>
+        <button type="button" onclick="smoothScrollToSection('experience')">Experience</button>
+        <button type="button" onclick="smoothScrollToSection('social-links')">Social Links</button>
+        <button type="button" onclick="smoothScrollToSection('contact')">Contact</button>
+      </nav>
+    </nav>
+    <div class="container">
+      <section class="section about" id="about">
+        <div class="about-content">
+          <div class="profile-image-container" onclick="openProfileModal()">
+            <img src="profile.jpg" alt="Profile Image" class="profile-image">
+          </div>
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+              Hello! I am <b>TAONGA ALFRED PHIRI</b> a senior programmer with extensive experience in
+              developing high-quality software solutions. My passion lies in solving
+              complex problems and continuously learning new technologies to stay
+              ahead in this ever-evolving field.
+            </p>
+            <a href="#" class="btn btn-primary" onclick="smoothScrollToSection('contact')">Hire Me</a>
+          </div>
+        </div>
+      </section>
+      <div id="profile-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-button" onclick="closeProfileModal()">&times;</span>
+          <img src="profile.jpg" alt="Profile Image" class="expanded-profile-image">
+        </div>
+      </div>
+      <section class="section skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill-box">
+            <i class="fab fa-js"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="skill-box">
+            <i class="fab fa-python"></i>
+            <p>Python</p>
+          </div>
+          <div class="skill-box">
+            <i class="fab fa-java"></i>
+            <p>Java</p>
+          </div>
+          <div class="skill-box">
+            <i class="fab fa-react"></i>
+            <p>React</p>
+          </div>
+          <div class="skill-box">
+            <i class="fab fa-html5"></i>
+            <p>HTML</p>
+          </div>
+          <div class="skill-box">
+            <i class="fab fa-css3-alt"></i>
+            <p>CSS</p>
+          </div>
+          <div class="skill-box">
+            <i class="fas fa-database"></i>
+            <p>SQL</p>
+          </div>
+          <div class="skill-box">
+            <i class="fab fa-node-js"></i>
+            <p>Node.js</p>
+          </div>
+        </div>
+      </section>
+      <section class="section projects" id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+          <div class="project-box">
+            <a href="https://github.com/asoshah/emaso" target="_blank">
+              EMASO
+            </a>
+          </div>
+          <div class="project-box">
+            <a href="https://github.com/your-username/kwithukitchen" target="_blank">
+              Kwithu Kitchen
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section experience" id="experience">
+        <h2>Experience</h2>
+        <div class="experience-container">
+          <div class="experience-box">
+            <a href="https://unilia.ac.mw/laws/" target="_blank">
+              University Of Livingstonia - Senior Software Engineer (2022 - 2024)
+            </a>
+          </div>
+          <div class="experience-box">
+            <a href="https://lukeinternational.no/malawi/" target="_blank">
+              Luke International - Software Developer (2024 - 2024)
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section social-links" id="social-links">
+        <h2>Social Media</h2>
+        <div class="social-links-container">
+          <a href="https://www.facebook.com/yourprofile" target="_blank" class="text-dark mx-2">
+            <i class="fab fa-facebook fa-2x footer-icon"></i>
+          </a>
+          <a href="https://wa.me/+265882667288" target="_blank" class="text-dark mx-2">
+            <i class="fab fa-whatsapp fa-2x footer-icon"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-dark mx-2">
+            <i class="fab fa-linkedin fa-2x footer-icon"></i>
+          </a>
+          <a href="https://github.com/your-username" target="_blank" class="text-dark mx-2">
+            <i class="fab fa-github fa-2x footer-icon"></i>
+          </a>
+        </div>
+      </section>
+      <section class="section contact" id="contact">
+        <h2>Contact</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>&copy; 2024 SOSHALO MONTANA. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleMenuOpen() {
+        document.body.classList.toggle('menu-open');
+      }
+      function smoothScrollToSection(
+sectionId) {
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+        document.querySelector('.navbar').classList.remove('open');
+      }
+      function openProfileModal() {
+  var modal = document.getElementById("profile-modal");
+  modal.style.display = "block";
+}
+
+function closeProfileModal() {
+  var modal = document.getElementById("profile-modal");
+  modal.style.display = "none";
+}
+
+    </script>
+  </body>
+</html>
